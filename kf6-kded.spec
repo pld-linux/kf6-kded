@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.1
+%define		kdeframever	6.2
 %define		qtver		5.15.2
 %define		kfname		kded
 
 Summary:	Central daemon of KDE work spaces
 Summary(pl.UTF-8):	Centralny demon przestrzeni roboczych KDE
 Name:		kf6-%{kfname}
-Version:	6.1.0
+Version:	6.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	f09462c9ef3a243abab31420e3943528
+# Source0-md5:	87cba7e4ba0993050df899600fef9473
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -50,9 +50,9 @@ the background and performs a number of small tasks. Some of these
 tasks are built in, others are started on demand.
 
 %description -l pl.UTF-8
-KDED to skrót od KDE Daemon, co nie mówi zbyt wiele. KDED działa w
-tle i wykonuje wiele małych zadań. Niektóre są wbudowane, inne
-uruchamiane w razie potrzeby.
+KDED to skrót od KDE Daemon, co nie mówi zbyt wiele. KDED działa w tle
+i wykonuje wiele małych zadań. Niektóre są wbudowane, inne uruchamiane
+w razie potrzeby.
 
 %package devel
 Summary:	Header files for %{kfname} development
@@ -116,6 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/kded6.8*
 %{_mandir}/nl/man8/kded6.8*
 %{_mandir}/tr/man8/kded6.8*
+%{_mandir}/uk/man8/kded6.8*
 
 %files devel
 %defattr(644,root,root,755)
