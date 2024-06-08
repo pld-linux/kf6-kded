@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.2
+%define		kdeframever	6.3
 %define		qtver		5.15.2
 %define		kfname		kded
 
 Summary:	Central daemon of KDE work spaces
 Summary(pl.UTF-8):	Centralny demon przestrzeni roboczych KDE
 Name:		kf6-%{kfname}
-Version:	6.2.0
+Version:	6.3.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	87cba7e4ba0993050df899600fef9473
+# Source0-md5:	ec59d897cf2bf73eab1a843fc3e7f0cc
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -40,7 +40,7 @@ Requires:	kf6-kcrash >= %{version}
 Requires:	kf6-kdbusaddons >= %{version}
 Requires:	kf6-kservice >= %{version}
 Requires:	systemd-units >= 1:250.1
-Obsoletes:	kf5-%{kfname} < %{version}
+#Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -60,7 +60,7 @@ Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Obsoletes:	kf5-%{kfname}-devel < %{version}
+#Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
