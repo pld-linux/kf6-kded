@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.19
+%define		kdeframever	6.20
 %define		qtver		5.15.2
 %define		kfname		kded
 
 Summary:	Central daemon of KDE work spaces
 Summary(pl.UTF-8):	Centralny demon przestrzeni roboczych KDE
 Name:		kf6-%{kfname}
-Version:	6.19.0
+Version:	6.20.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	675df934371245094ba795ee0d1e42ae
+# Source0-md5:	9fec31c961d6f003b77dab2ef634f595
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
