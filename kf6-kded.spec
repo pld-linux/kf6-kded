@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.20
+%define		kdeframever	6.21
 %define		qtver		5.15.2
 %define		kfname		kded
 
 Summary:	Central daemon of KDE work spaces
 Summary(pl.UTF-8):	Centralny demon przestrzeni roboczych KDE
 Name:		kf6-%{kfname}
-Version:	6.20.0
+Version:	6.21.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9fec31c961d6f003b77dab2ef634f595
+# Source0-md5:	a21a7b4654d0d3f73a019a42e4a8fccc
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -113,11 +113,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories6/kded.renamecategories
 %{systemduserunitdir}/plasma-kded6.service
 %{_mandir}/ca/man8/kded6.8*
+%{_mandir}/ca@valencia/man8/kded6.8*
 %{_mandir}/es/man8/kded6.8*
 %{_mandir}/fr/man8/kded6.8*
 %{_mandir}/it/man8/kded6.8*
 %{_mandir}/man8/kded6.8*
 %{_mandir}/nl/man8/kded6.8*
+%{_mandir}/pt_BR/man8/kded6.8*
 %{_mandir}/sl/man8/kded6.8*
 %{_mandir}/tr/man8/kded6.8*
 %{_mandir}/uk/man8/kded6.8*
